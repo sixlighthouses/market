@@ -8,6 +8,7 @@ import { Button } from '../components/ui/Button'
 const publicNavLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
+  { to: '/blog', label: 'Blog' },
 ] as const
 
 const privateNavLinks = [{ to: '/dashboard', label: 'Dashboard' }] as const

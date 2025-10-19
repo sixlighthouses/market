@@ -8,6 +8,7 @@ const Home = lazy(() => import('../pages/Home'))
 const About = lazy(() => import('../pages/About'))
 const Dashboard = lazy(() => import('../pages/Dashboard'))
 const Login = lazy(() => import('../pages/Login'))
+const Blog = lazy(() => import('../pages/Blog'))
 const Register = lazy(() => import('../pages/Register'))
 
 // Error boundary component
@@ -47,6 +48,10 @@ const routes = {
       path: 'register',
       element: <Register />,
     },
+    {
+      path: 'blog',
+      element: <Blog />,
+    }
   ],
   protected: [
     {
