@@ -1,6 +1,7 @@
 import { createContext, useContext, useReducer, ReactNode, Dispatch } from 'react'
 import { AppState, Theme, NotificationType } from '../types'
 import { AuthProvider } from './AuthContext'
+import { BlogProvider } from './BlogContext'
 
 // Action types
 export const ACTIONS = {
@@ -106,7 +107,9 @@ export function AppProvider({ children }: AppProviderProps) {
   return (
     <AppContext.Provider value={state}>
       <AppDispatchContext.Provider value={dispatch}>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <BlogProvider>{children}</BlogProvider>
+        </AuthProvider>
       </AppDispatchContext.Provider>
     </AppContext.Provider>
   )
